@@ -8,7 +8,7 @@ public class _005DecisionMakingStatement {
        // dm.ifStatement();
       //  dm.ifElseStatement();
       //  dm.ladderStatement();
-        dm.switchStatement();
+        dm.switchStatement2();
     }
 
     public  void ifStatement(){
@@ -102,6 +102,32 @@ public class _005DecisionMakingStatement {
                 break;
             case 7:
                 System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day of the week");
+                break;
+        }
+    }
+
+    public void switchStatement2(){
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter day of the week (1-7): ");
+        int dayoftheweek= sc.nextInt();
+
+        switch (dayoftheweek)  {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Weekday");
+                break;
+            case 6:
+
+            case 7:
+                System.out.println("Weekend");
                 break;
             default:
                 System.out.println("Invalid day of the week");
