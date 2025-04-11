@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class _007ArraysDemo {
     public static void main(String[] args) {
         _007ArraysDemo array = new _007ArraysDemo();
-        array.twoDimensionArray();
+        array.arrayslassDemo();
 
     }
 
@@ -89,5 +89,17 @@ public class _007ArraysDemo {
           }
             System.out.println();
         }
+    }
+
+    public void arrayslassDemo(){
+        int numArr[]={12,51,32,29,45,58};
+        System.out.println(Arrays.toString(numArr));
+        //Sorting array
+        Arrays.sort(numArr);
+        System.out.println(Arrays.toString(numArr));
+
+        //Searching in array
+        int index= Arrays.binarySearch(numArr, 72);
+        System.out.println("Index of 32 is: "+index);
     }
 }
