@@ -12,6 +12,11 @@ public class MountainBike extends Bicycle {
         seatHeight = newValue;
     }
 
+    public void test(){
+        System.out.println("This is test method");
+    }
+
+
     public String toString() {
         return (super.toString() + "\nseat height is " + seatHeight);
     }
