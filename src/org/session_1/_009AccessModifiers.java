@@ -24,7 +24,9 @@ public class _009AccessModifiers {
         System.out.println("This is protected method");
     }
     public void test4(){
+
         System.out.println("This is public method");
+
     }
 
 }
