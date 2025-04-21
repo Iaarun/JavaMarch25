@@ -10,8 +10,8 @@ public class Bicycle {
             this.speed = speed;
         }
 
-     public void applyBrake(int decrement) {
-            speed -= decrement;
+    public void applyBrake(int decrement) {
+        speed -= decrement;
         }
 
      public void speedUp(int increment) {
