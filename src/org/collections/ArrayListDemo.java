@@ -16,6 +16,7 @@ public class ArrayListDemo {
     public void listDemo(){
         //default size is 10
         //load factor is 0.75
+        // array list  is the ordered collection of elements
 //        ArrayList<Integer> list2 = new ArrayList<Integer>();
 //        list2.add(256);
 
