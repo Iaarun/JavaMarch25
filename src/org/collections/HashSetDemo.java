@@ -116,7 +116,6 @@ public class HashSetDemo {
         System.out.println("\n Iterating through the set using stream API:");
         set.stream().forEach(s -> System.out.print(s+" "));
 
-
     }
 
 
