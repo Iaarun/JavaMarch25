@@ -54,8 +54,9 @@ public class FileHandlingDemo {
     public void readPropertiesfile() throws IOException {
         File file = new File("src/org/filehandling/dummy.properties");
         FileInputStream fis = new FileInputStream(file);
+        //Properties class is used to maintain the properties file
         Properties prop = new Properties();
-
+//load method is used to load the properties file
         prop.load(fis);
 
         System.out.println(prop.get("name") );
