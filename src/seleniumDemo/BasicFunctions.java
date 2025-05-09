@@ -11,7 +11,7 @@ public class BasicFunctions {
     public static void main(String[] args) {
             BasicFunctions basicFunctions = new BasicFunctions();
             basicFunctions.launchChromeBrowser();
-            basicFunctions.basicDrvingFunctions();
+            basicFunctions.browserNavigation();
             basicFunctions.closeBrowser();
 
     }
@@ -41,10 +41,28 @@ public class BasicFunctions {
         //launch multiple tabs
         driver.switchTo().newWindow(WindowType.TAB);
         // getWindowHandles() method returns the window handles of all open windows
+        driver.get("https://www.google.com/");
       Set<String> allId= driver.getWindowHandles();
         System.out.println("All window handles are: " + allId);
 
+        driver.switchTo().window(windowHandle);
+
     }
+
+    public void browserNavigation() {
+        // Code to navigate back and forward in the browser
+        driver.navigate().to("https://www.saucedemo.com/");
+        System.out.println("Page title is: " + driver.getTitle());
+        driver.navigate().to("https://www.google.com/");
+        System.out.println("Page title is: " + driver.getTitle());
+        driver.navigate().back();
+        System.out.println("Page title is: " + driver.getTitle()); //swag labs
+        driver.navigate().forward();
+        System.out.println("Page title is: " + driver.getTitle()); //google
+        driver.navigate().refresh();
+
+    }
+
 
     public void closeBrowser() {
 
