@@ -5,13 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class SendData {
 WebDriver driver;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         SendData sendData = new SendData();
         sendData.launchChromeBrowser();
-        sendData.getErrorText();
+        sendData.findElementUsingXpath();
         //sendData.closeBrowser();
     }
     public void launchChromeBrowser() {
@@ -58,6 +60,42 @@ WebDriver driver;
          String errorMessage= error.getText();
           System.out.println("Error message is: " + errorMessage);
 
+      }
+
+      public void findElementUsingLinkTextAndPartialLinkText() throws InterruptedException {
+        driver.navigate().to("https://bonigarcia.dev/selenium-webdriver-java/");
+        //locate link using link text
+         WebElement dropDownMenu= driver.findElement(By.linkText("Dropdown menu"));
+            //click on link
+          dropDownMenu.click();
+          Thread.sleep(2000);
+          driver.navigate().back();
+       WebElement canvas=   driver.findElement(By.partialLinkText("in canvas"));
+       canvas.click();
+
+      }
+
+      public void findMultipleElementsUsingA(){
+          driver.navigate().to("https://bonigarcia.dev/selenium-webdriver-java/");
+          //all links using tag name
+         List<WebElement> allLinks= driver.findElements(By.tagName("a"));
+            System.out.println("Total number of links are: " + allLinks.size());
+            //print all links
+           for(WebElement link:allLinks){
+               System.out.println("Link text :"+ link.getText()+" and link is: "+link.getAttribute("href"));
+           }
+
+      }
+
+      public void findElementUsingXpath(){
+        driver.navigate().to("https://bonigarcia.dev/selenium-webdriver-java/");
+        //locate link using xpath
+        WebElement incanvas= driver.findElement(By.xpath("//a[contains(@href,'in-canvas')]"));
+        //click on link
+          //getText() method returns the text of the element
+          String text= incanvas.getText();
+          System.out.println("Text is: " + text);
+          incanvas.click();
 
 
       }
