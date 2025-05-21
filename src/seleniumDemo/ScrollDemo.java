@@ -22,7 +22,7 @@ public class ScrollDemo {
         driver.get("https://www.selenium.dev/");
     }
 
-    public void randonscroll(){
+    public void randomscroll(){
         System.out.println("Performing random scroll...");
         // Add code to perform random scroll
         // Scroll down by 500 pixels
