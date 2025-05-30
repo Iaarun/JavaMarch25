@@ -1,0 +1,36 @@
+<suite name=" smokeSuite">
+    <!-- This test is for single Parameterization -->
+<!--<test name="smokeTest">-->
+<!--   <parameter name="searchdata" value="JavaQuestion"/>-->
+<!--    <classes>-->
+<!--        <class name="testNgDemo.Parameterization"/>-->
+<!--    </classes>-->
+<!--</test>-->
+
+    <!-- This test is for multiple Parameterization -->
+    <!--
+    <test name="LoginWithAdmin">
+        <parameter name="username" value="admin@test.com"/>
+        <parameter name="password" value="abc@123!@#"/>
+        <classes>
+            <class name="testNgDemo.Parameterization"/>
+        </classes>
+    </test>
+
+
+    <test name="LoginWithDeveloper">
+        <parameter name="username" value="devc@test.com"/>
+        <parameter name="password" value="abc@123!@#"/>
+        <classes>
+            <class name="testNgDemo.Parameterization"/>
+        </classes>
+    </test> -->
+    <!-- This test is for default/optional parameterization -->
+ <test name="OptionalParameterization">
+     <!-- option parameter can be overridden by using the parameter tag  -->
+     <parameter name="testMessage" value="I love java programming"/>
+     <classes>
+         <class name="testNgDemo.Parameterization"/>
+     </classes>
+ </test>
+</suite>
