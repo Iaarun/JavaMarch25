@@ -9,7 +9,7 @@ public class TestClass {
         System.out.println("This is a test method.");
     }
 
-    @Test
+   @Test
     public void anotherTestMethod() {
         System.out.println("This is another test method.");
     }

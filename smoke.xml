@@ -1,0 +1,13 @@
+<suite name=" smokeSuite">
+<test name="smokeTest">
+    <groups>
+        <run>
+            <include name="smoke"/>
+            <exclude name="login"/>
+        </run>
+    </groups>
+    <classes>
+        <class name="testNgDemo.GroupDemo"/>
+    </classes>
+</test>
+</suite>

@@ -1,11 +1,12 @@
 <suite name="demo" parallel="none" thread-count="2">
-
-
-
     <test name="firstTest">
         <classes>
-            <class name="testNgDemo.TestClass2"/>
-            <class name="testNgDemo.TestClass3"/>
+            <class name="testNgDemo.TestClass2">
+                <methods>
+                    <include name="testMethod"/>
+                    <exclude name="anotherTestMethod"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

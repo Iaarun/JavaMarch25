@@ -1,0 +1,8 @@
+<suite name=" smokeSuite">
+<test name="smokeTest">
+    <classes>
+        <class name="testNgDemo.TestClass"/>
+    </classes>
+
+</test>
+</suite>

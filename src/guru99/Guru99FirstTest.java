@@ -93,6 +93,8 @@ public class Guru99FirstTest {
 
     public void  validateListisSorted(){
         ArrayList<String> phoneNames= new ArrayList<>();
+        String expectederrorMessage = "Some of the products cannot be ordered in requested quantity.";
+        String actualErrorMessage = driver.findElement(By.xpath("//li[@class='error-msg']/ul/li/span")).getText();
      List<WebElement> names= driver.findElements(By.xpath("//h2[@class='product-name']/a"));
        for(WebElement ele:names){
            phoneNames.add(ele.getText());
@@ -106,8 +108,14 @@ public class Guru99FirstTest {
      } else {
          System.out.println("Products are not sorted by name");
      }
-
+        if(actualErrorMessage.equalsIgnoreCase(expectederrorMessage)){
+            System.out.println("Error message is not matched");
+        } else {
+            System.out.println("Error message is not matched");
+        }
     }
+
+
 
 
 
