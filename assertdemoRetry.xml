@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="RunFailedTestcasesSuit" verbose="1">
+    <listeners>
+        <listener class-name="testNgDemo.AnnotationTransformer"></listener>
+    </listeners>
+<test name="RunfailedTests">
+    <classes>
+        <class name="testNgDemo.AssertionDemo"/>
+    </classes>
+</test>
+</suite>
